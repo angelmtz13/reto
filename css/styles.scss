@@ -1,0 +1,59 @@
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$card-bg-color: #ffffff;
+$card-hover-bg: #f8f9fa;
+$border-radius: 8px;
+
+.product-card {
+  background-color: $card-bg-color;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    background-color: $card-hover-bg;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  &__image {
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    object-fit: cover;
+    height: 200px;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: $primary-color;
+  }
+
+  &__description {
+    font-size: 1rem;
+    color: $secondary-color;
+    margin-bottom: 15px;
+  }
+
+  &__details-btn {
+    background-color: $primary-color;
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    border-radius: $border-radius / 2;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+.modal-content {
+  border-radius: $border-radius;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
